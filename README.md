@@ -4,6 +4,7 @@ Graffles stencils for CNCF projects.
 
 All icons comes from [cncf/landscape](https://github.com/cncf/landscape/)
 
+![snapshot](https://github.com/alswl/cncf-stencils/blob/master/snapshot.jpg?raw=true)
 
 ## Downloads
 
