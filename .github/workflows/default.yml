@@ -29,7 +29,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Install packages
-        run: sudo apt-get install -y sponge librsvg2-bin
+        run: sudo apt-get install -y moreutils librsvg2-bin
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
