@@ -25,3 +25,8 @@ Python 3.9+
 ```
 make install vendor build
 ```
+
+## Change Logs
+
+- 2021-12-16, init this projects, and it works
+- 2021-12-21, resize all SVG images with height 120px limit
