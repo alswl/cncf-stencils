@@ -10,9 +10,9 @@ All icons comes from [cncf/landscape](https://github.com/cncf/landscape/)
 
 Latest artifacts in [Actions](https://github.com/alswl/cncf-stencils/actions).
 
-or this artifacts:
+or this latest artifacts:
 
-[alswl/cncf-stencils@f35bdb5](https://github.com/alswl/cncf-stencils/actions/runs/1587492218)
+[cncf-stencils@9186ef2](https://github.com/alswl/cncf-stencils/actions/runs/1606079608)
 
 
 ## Build Required
