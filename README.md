@@ -35,4 +35,4 @@ make install vendor build
 - 2021-12-23
   - gropu logos with categories
   - add missing logos from `hosted_logos`, eg `dockerswarm.svg`
-  - resize all SVG images with height 79px limit
+  - resize all SVG images with height 80px limit
