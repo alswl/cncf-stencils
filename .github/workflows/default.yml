@@ -36,7 +36,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: make install vendor build
+        run: make install-for-github-actions vendor build
 
       - uses: actions/upload-artifact@v2
         with:
