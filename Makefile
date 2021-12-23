@@ -4,7 +4,7 @@ source_icons_version = "unknown"
 .PHONY: install
 install:
 	pip3 install omnigraffle-stencil
-	patch $(shell pip3 show -f omnigraffle-stencil | grep Location | awk '{print $2}')/omnigraffle_stencil/converter.py hack/converter.py.diff
+	patch $(shell pip3 show -f omnigraffle-stencil | grep Location | awk '{print $$2}')/omnigraffle_stencil/converter.py hack/converter.py.diff
 
 .PHONY: install-for-github-actions
 install-for-github-actions:
