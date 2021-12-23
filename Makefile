@@ -4,6 +4,9 @@ source_icons_version = "unknown"
 .PHONY: install
 install:
 	pip3 install omnigraffle-stencil
+	which python
+	which omnigraffle-stencil
+	python3 -c "import site; print(site.getsitepackages())"
 	patch $(shell python3 -c "import site; print(site.getsitepackages()[0])")/omnigraffle_stencil/converter.py hack/converter.py.diff
 
 .PHONY: vendor
