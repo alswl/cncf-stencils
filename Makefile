@@ -4,14 +4,12 @@ source_icons_version = "unknown"
 .PHONY: install
 install:
 	pip3 install omnigraffle-stencil
-	# pip3 show -f omnigraffle-stencil
-	# which python
-	# which python3
-	# which omnigraffle-stencil
-	# python3 -c "import site; print(site.getsitepackages())"
-	pip3 show -f omnigraffle-stencil
-	
-	patch $(shell pip3 show -f omnigraffle-stencil | grep Location | awk '{print $$2}')/omnigraffle_stencil/converter.py hack/converter.py.diff
+	patch $(shell pip3 show -f omnigraffle-stencil | grep Location | awk '{print $2}')/omnigraffle_stencil/converter.py hack/converter.py.diff
+
+.PHONY: install-for-github-actions
+install-for-github-actions:
+	pip3 install omnigraffle-stencil
+	patch /home/runner/.local/lib/python3.8/site-packages/omnigraffle_stencil/converter.py hack/converter.py.diff
 
 .PHONY: vendor
 vendor:
