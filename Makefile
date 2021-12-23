@@ -4,6 +4,7 @@ source_icons_version = "unknown"
 .PHONY: install
 install:
 	pip3 install omnigraffle-stencil
+	pip3 show -f omnigraffle-stencil
 	which python
 	which python3
 	which omnigraffle-stencil
