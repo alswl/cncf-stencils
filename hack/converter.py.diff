@@ -1,0 +1,13 @@
+@@ -43,7 +43,11 @@
+ 
+         for svg_path in images_in_group:
+             image_idx += 1
+-            pdf_image_path = save_image_as_pdf(svg_path, args.stencil_file, image_idx)
++            try:
++                pdf_image_path = save_image_as_pdf(svg_path, args.stencil_file, image_idx)
++            except:
++                print("convert error: " + svg_path)
++                continue
+             stencil_name = create_name(svg_path, args.stencil_name_remove)
+             sheet_image_bounds.append(calc_next_image_bounds(pdf_image_path, sheet_image_bounds))
+             image_pl = create_image_plist(image_pl_tpl, image_idx, stencil_name, sheet_image_bounds[-1],
