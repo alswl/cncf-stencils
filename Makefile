@@ -11,7 +11,7 @@ install:
 	# python3 -c "import site; print(site.getsitepackages())"
 	pip3 show -f omnigraffle-stencil
 	
-	patch $(shell pip3 show -f omnigraffle-stencil | grep Location | awk '{print $2}')/omnigraffle_stencil/converter.py hack/converter.py.diff
+	patch $(shell pip3 show -f omnigraffle-stencil | grep Location | awk '{print $$2}')/omnigraffle_stencil/converter.py hack/converter.py.diff
 
 .PHONY: vendor
 vendor:
