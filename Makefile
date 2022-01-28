@@ -25,8 +25,8 @@ build:
 	mkdir -p build/cached_logos
 	mkdir -p build/final
 	# height limits
-	(cd vendor/landscape/cached_logos && find . -name "*.svg" -exec rsvg-convert -h 80 -f svg {} -o ../../../build/cached_logos/{} \;)
-	(cd vendor/landscape/hosted_logos && find . -name "*.svg" -exec rsvg-convert -h 80 -f svg {} -o ../../../build/hosted_logos/{} \;)
+	(cd vendor/landscape/cached_logos && find . -name "*.svg" -exec rsvg-convert -h 96 -f svg {} -o ../../../build/cached_logos/{} \;)
+	(cd vendor/landscape/hosted_logos && find . -name "*.svg" -exec rsvg-convert -h 96 -f svg {} -o ../../../build/hosted_logos/{} \;)
 	# grouping
 	python scripts/group.py
 	# build stencil
