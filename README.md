@@ -12,7 +12,7 @@ Latest artifacts in [Actions](https://github.com/alswl/cncf-stencils/actions).
 
 or this artifacts(Maybe not the latest):
 
-[alswl/cncf-stencils@d899384](https://github.com/alswl/cncf-stencils/actions/runs/1636098892)
+[alswl/cncf-stencils@4f0fbaa](https://github.com/alswl/cncf-stencils/actions/runs/2562795645)
 
 ## Build Required
 
