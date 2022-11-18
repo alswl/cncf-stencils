@@ -46,7 +46,6 @@ jobs:
       - name: Run a one-line script
         run: |
           make install
-          pip3 show -f omnigraffle-stencil
           make patch
           make vendor
           make build
