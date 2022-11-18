@@ -4,7 +4,7 @@ python_lib_path = $(shell pip3 show -f omnigraffle-stencil | grep Location | awk
 
 .PHONY: install
 install:
-	pip3 install omnigraffle-stencil
+	pip3 install omnigraffle-stencil pyyaml
 
 .PHONY: patch
 patch:
