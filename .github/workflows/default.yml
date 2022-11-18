@@ -46,6 +46,7 @@ jobs:
       - name: Run a one-line script
         run: |
           make install
+          pip3 show -f omnigraffle-stencil
           make patch python_lib_path=/home/runner/.local/lib/python3.10/site-packages
           make vendor
           make build
