@@ -47,7 +47,7 @@ jobs:
         run: |
           make install
           pip3 show -f omnigraffle-stencil
-          make patch python_lib_path=/home/runner/.local/lib/python3.10/site-packages
+          make patch
           make vendor
           make build
 
