@@ -34,11 +34,16 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
           make install
-          make patch python_lib_path=/home/runner/.local/lib/python3.10/site-packages
+          make patch python_lib_path=/home/runner/.local/lib/python${{ matrix.python-version }}/site-packages
           make vendor
           make build
 
