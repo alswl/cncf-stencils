@@ -20,7 +20,7 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    # https://github.com/actions/runner-images/blob/ubuntu22/20221027.1/images/linux/Ubuntu2204-Readme.md
+    # matrix dosc: https://github.com/actions/runner-images/blob/ubuntu22/20221027.1/images/linux/Ubuntu2204-Readme.md
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -34,6 +34,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
+      # python setup docs: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v4
         with:
