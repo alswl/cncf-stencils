@@ -35,7 +35,11 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: make install-for-github-actions vendor build
+        run: |
+          make install
+          make patch python_lib_path=/home/runner/.local/lib/python3.9/site-packages
+          make vendor
+          make build
 
       - uses: actions/upload-artifact@v2
         with:

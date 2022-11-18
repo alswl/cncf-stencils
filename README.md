@@ -22,11 +22,13 @@ Python 3.9+
 ## Build
 
 ```
-make install vendor build
+make install patch vendor build
 ```
 
 ## Change Logs
 
+- 2022-11-18
+  - update CI for ubuntu 22.04 and python 3.9
 - 2021-12-16
   - init this projects
   - it works
