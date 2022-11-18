@@ -20,10 +20,11 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
+    # https://github.com/actions/runner-images/blob/ubuntu22/20221027.1/images/linux/Ubuntu2204-Readme.md
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.9]
+        python-version: [3.10]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -37,7 +38,7 @@ jobs:
       - name: Run a one-line script
         run: |
           make install
-          make patch python_lib_path=/home/runner/.local/lib/python3.9/site-packages
+          make patch python_lib_path=/home/runner/.local/lib/python3.10/site-packages
           make vendor
           make build
 
