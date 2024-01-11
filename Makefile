@@ -5,8 +5,7 @@ python_lib_path = $(shell pip3 show -f omnigraffle-stencil | grep Location | awk
 .PHONY: install
 install:
 	pip3 install omnigraffle-stencil
-	# pyyaml break changes https://github.com/yaml/pyyaml/blob/8cdff2c80573b8be8e8ad28929264a913a63aa33/CHANGES#L17
-	pip3 install pyyaml==5.4.1
+	pip3 install pyyaml==6.0.1
 
 .PHONY: patch
 patch:

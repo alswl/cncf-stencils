@@ -21,7 +21,7 @@ def parse():
     raw = ''
     with open('vendor/landscape/landscape.yml', 'r') as f:
         raw = f.read()
-    config = yaml.load(raw)
+    config = yaml.load(raw, Loader=yaml.Loader)
 
 
     for c in config['landscape']:
