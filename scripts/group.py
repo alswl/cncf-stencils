@@ -7,12 +7,10 @@ ROOT = '.'
 def copy(category, sub_category, logo):
     os.makedirs(os.path.join(ROOT, 'build', 'final', category + " > " + sub_category), exist_ok=True)
 
-    src = os.path.join(ROOT, 'build/cached_logos', logo)
+    src = os.path.join(ROOT, 'build/hosted_logos', logo)
     if not os.path.isfile(src):
-        src = os.path.join(ROOT, 'build/hosted_logos', logo)
-        if not os.path.isfile(src):
-            print('Not exist ' + src)
-            return
+        print('Not exist ' + src)
+        return
     dest = os.path.join(ROOT, 'build', 'final', category + " > " + sub_category, logo)
 
     copy2(src, dest)
