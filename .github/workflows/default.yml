@@ -50,7 +50,7 @@ jobs:
           make vendor
           make build
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         with:
           name: cncf-stencil
           path: ./output/*.gstencil.zip
